@@ -2,23 +2,22 @@
 //
 // Copyright (c) 2016 Alexander Grebenyuk (github.com/kean).
 
-import Foundation
 import UIKit
 
 /// Signals the delegate that the preheat window changes.
-public protocol ImagePreheatingControllerDelegate: class {
+public protocol PreheatControllerDelegate: class {
     /// Signals the delegate that the preheat window changes. Provides an array of index paths being added and being removed from the previously calculated preheat window.
-    func preheatingController(controller: ImagePreheatingController, didUpdateWithAddedIndexPaths addedIndexPaths: [NSIndexPath], removedIndexPaths: [NSIndexPath])
+    func preheatingController(controller: PreheatController, didUpdateWithAddedIndexPaths addedIndexPaths: [NSIndexPath], removedIndexPaths: [NSIndexPath])
 }
 
 /**
- Automates image preheating. Abstract class.
+ Automates precaching of content. Abstract class.
  
- After creating image preheating controller you should enable it by settings enabled property to true.
+ After creating preheat controller you should enable it by settings enabled property to true.
 */
-public class ImagePreheatingController: NSObject {
+public class PreheatController: NSObject {
     /// The delegate of the receiver.
-    public weak var delegate: ImagePreheatingControllerDelegate?
+    public weak var delegate: PreheatControllerDelegate?
 
     /// The scroll view that the receiver was initialized with.
     public let scrollView: UIScrollView
@@ -26,7 +25,7 @@ public class ImagePreheatingController: NSObject {
     /// Current preheat index paths.
     public private(set) var preheatIndexPath = [NSIndexPath]()
 
-    /// Default value is false. When image preheating controller is enabled it immediately updates preheat index paths and starts reacting to user actions. When preheating controller is disabled it removes all current preheating index paths and signals its delegate.
+    /// Default value is false. When preheat controller is enabled it immediately updates preheat index paths and starts reacting to user actions. When preheating controller is disabled it removes all current preheating index paths and signals its delegate.
     public var enabled = false
     
     deinit {
@@ -67,16 +66,16 @@ public class ImagePreheatingController: NSObject {
 
 // MARK: Internal
 
-internal func distanceBetweenPoints(p1: CGPoint, _ p2: CGPoint) -> CGFloat {
+func distanceBetweenPoints(p1: CGPoint, _ p2: CGPoint) -> CGFloat {
     let dx = p2.x - p1.x, dy = p2.y - p1.y
     return sqrt((dx * dx) + (dy * dy))
 }
 
-internal enum ScrollDirection {
+enum ScrollDirection {
     case Forward, Backward
 }
 
-internal func sortIndexPaths<T: SequenceType where T.Generator.Element == NSIndexPath>(indexPaths: T, inScrollDirection scrollDirection: ScrollDirection) -> [NSIndexPath] {
+func sortIndexPaths<T: SequenceType where T.Generator.Element == NSIndexPath>(indexPaths: T, inScrollDirection scrollDirection: ScrollDirection) -> [NSIndexPath] {
     return indexPaths.sort {
         switch scrollDirection {
         case .Forward: return $0.section < $1.section || $0.item < $1.item

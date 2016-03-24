@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1F567C1CA45C6D00C43D3A /* ImagePreheatingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F56791CA45C6D00C43D3A /* ImagePreheatingController.swift */; };
-		0C1F567D1CA45C6D00C43D3A /* ImagePreheatingControllerForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F567A1CA45C6D00C43D3A /* ImagePreheatingControllerForCollectionView.swift */; };
-		0C1F567E1CA45C6D00C43D3A /* ImagePreheatingControllerForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F567B1CA45C6D00C43D3A /* ImagePreheatingControllerForTableView.swift */; };
+		0C1F567C1CA45C6D00C43D3A /* PreheatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F56791CA45C6D00C43D3A /* PreheatController.swift */; };
+		0C1F567D1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F567A1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift */; };
+		0C1F567E1CA45C6D00C43D3A /* PreheatControllerForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F567B1CA45C6D00C43D3A /* PreheatControllerForTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C1F56771CA45C5400C43D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
-		0C1F56791CA45C6D00C43D3A /* ImagePreheatingController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreheatingController.swift; sourceTree = "<group>"; };
-		0C1F567A1CA45C6D00C43D3A /* ImagePreheatingControllerForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreheatingControllerForCollectionView.swift; sourceTree = "<group>"; };
-		0C1F567B1CA45C6D00C43D3A /* ImagePreheatingControllerForTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePreheatingControllerForTableView.swift; sourceTree = "<group>"; };
+		0C1F56791CA45C6D00C43D3A /* PreheatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatController.swift; sourceTree = "<group>"; };
+		0C1F567A1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForCollectionView.swift; sourceTree = "<group>"; };
+		0C1F567B1CA45C6D00C43D3A /* PreheatControllerForTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForTableView.swift; sourceTree = "<group>"; };
 		0C1F56801CA45C9F00C43D3A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0C1F56811CA45CAA00C43D3A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0CD20B151CA45C1E006BA4B9 /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,9 +46,9 @@
 		0C1F56781CA45C6D00C43D3A /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				0C1F56791CA45C6D00C43D3A /* ImagePreheatingController.swift */,
-				0C1F567A1CA45C6D00C43D3A /* ImagePreheatingControllerForCollectionView.swift */,
-				0C1F567B1CA45C6D00C43D3A /* ImagePreheatingControllerForTableView.swift */,
+				0C1F56791CA45C6D00C43D3A /* PreheatController.swift */,
+				0C1F567A1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift */,
+				0C1F567B1CA45C6D00C43D3A /* PreheatControllerForTableView.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -147,9 +147,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C1F567E1CA45C6D00C43D3A /* ImagePreheatingControllerForTableView.swift in Sources */,
-				0C1F567C1CA45C6D00C43D3A /* ImagePreheatingController.swift in Sources */,
-				0C1F567D1CA45C6D00C43D3A /* ImagePreheatingControllerForCollectionView.swift in Sources */,
+				0C1F567E1CA45C6D00C43D3A /* PreheatControllerForTableView.swift in Sources */,
+				0C1F567C1CA45C6D00C43D3A /* PreheatController.swift in Sources */,
+				0C1F567D1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

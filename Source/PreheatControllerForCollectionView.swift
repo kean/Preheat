@@ -2,11 +2,10 @@
 //
 // Copyright (c) 2016 Alexander Grebenyuk (github.com/kean).
 
-import Foundation
 import UIKit
 
-/// Preheating controller for `UICollectionView` with `UICollectionViewFlowLayout` layout.
-public class ImagePreheatingControllerForCollectionView: ImagePreheatingController {
+/// Preheat controller for `UICollectionView` with `UICollectionViewFlowLayout` layout.
+public class PreheatControllerForCollectionView: PreheatController {
     /// The collection view that the receiver was initialized with.
     public var collectionView: UICollectionView {
         return scrollView as! UICollectionView

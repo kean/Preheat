@@ -4,8 +4,8 @@
 
 import UIKit
 
-/// Preheating controller for `UITableView`.
-public class ImagePreheatingControllerForTableView: ImagePreheatingController {
+/// Preheat controller for `UITableView`.
+public class PreheatControllerForTableView: PreheatController {
     /// The table view that the receiver was initialized with.
     public var tableView: UITableView {
         return scrollView as! UITableView
