@@ -7,7 +7,7 @@ import UIKit
 /// Signals the delegate that the preheat window changes.
 public protocol PreheatControllerDelegate: class {
     /// Signals the delegate that the preheat window changes. Provides an array of index paths being added and being removed from the previously calculated preheat window.
-    func preheatingController(controller: PreheatController, didUpdateWithAddedIndexPaths addedIndexPaths: [NSIndexPath], removedIndexPaths: [NSIndexPath])
+    func preheatControllerDidUpdate(controller: PreheatController, addedIndexPaths: [NSIndexPath], removedIndexPaths: [NSIndexPath])
 }
 
 /**
@@ -60,7 +60,7 @@ public class PreheatController: NSObject {
         let addedIndexPaths = indexPaths.filter { return !preheatIndexPath.contains($0) }
         let removedIndexPaths = Set(preheatIndexPath).subtract(indexPaths)
         preheatIndexPath = indexPaths
-        delegate?.preheatingController(self, didUpdateWithAddedIndexPaths: addedIndexPaths, removedIndexPaths: Array(removedIndexPaths))
+        delegate?.preheatControllerDidUpdate(self, addedIndexPaths: addedIndexPaths, removedIndexPaths: Array(removedIndexPaths))
     }
 }
 
