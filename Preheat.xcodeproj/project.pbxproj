@@ -24,8 +24,6 @@
 		0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForCollectionView.swift; sourceTree = "<group>"; };
 		0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForTableView.swift; sourceTree = "<group>"; };
 		0C2A20A91CA5A605008C0D4C /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C2A20B81CA5A641008C0D4C /* Preheat watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Preheat watchOS.h"; sourceTree = "<group>"; };
-		0C2A20BA1CA5A641008C0D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CD20B151CA45C1E006BA4B9 /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -68,21 +66,11 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
-		0C2A20B71CA5A641008C0D4C /* Preheat watchOS */ = {
-			isa = PBXGroup;
-			children = (
-				0C2A20B81CA5A641008C0D4C /* Preheat watchOS.h */,
-				0C2A20BA1CA5A641008C0D4C /* Info.plist */,
-			);
-			path = "Preheat watchOS";
-			sourceTree = "<group>";
-		};
 		0CD20B0B1CA45C1E006BA4B9 = {
 			isa = PBXGroup;
 			children = (
 				0C2A209D1CA5A388008C0D4C /* Sources */,
 				0C1F56761CA45C4900C43D3A /* Supporting */,
-				0C2A20B71CA5A641008C0D4C /* Preheat watchOS */,
 				0CD20B161CA45C1E006BA4B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -405,6 +393,7 @@
 				0C2A20B01CA5A605008C0D4C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0CD20B0F1CA45C1E006BA4B9 /* Build configuration list for PBXProject "Preheat" */ = {
 			isa = XCConfigurationList;
