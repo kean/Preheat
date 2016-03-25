@@ -10,6 +10,9 @@
 		0C2A20A11CA5A388008C0D4C /* PreheatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209E1CA5A388008C0D4C /* PreheatController.swift */; };
 		0C2A20A21CA5A388008C0D4C /* PreheatControllerForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */; };
 		0C2A20A31CA5A388008C0D4C /* PreheatControllerForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */; };
+		0C2A20BE1CA5A65F008C0D4C /* PreheatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209E1CA5A388008C0D4C /* PreheatController.swift */; };
+		0C2A20BF1CA5A65F008C0D4C /* PreheatControllerForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */; };
+		0C2A20C01CA5A65F008C0D4C /* PreheatControllerForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,10 +23,20 @@
 		0C2A209E1CA5A388008C0D4C /* PreheatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatController.swift; sourceTree = "<group>"; };
 		0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForCollectionView.swift; sourceTree = "<group>"; };
 		0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForTableView.swift; sourceTree = "<group>"; };
+		0C2A20A91CA5A605008C0D4C /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C2A20B81CA5A641008C0D4C /* Preheat watchOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Preheat watchOS.h"; sourceTree = "<group>"; };
+		0C2A20BA1CA5A641008C0D4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0CD20B151CA45C1E006BA4B9 /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0C2A20A51CA5A605008C0D4C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CD20B111CA45C1E006BA4B9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -55,11 +68,21 @@
 			path = Sources;
 			sourceTree = "<group>";
 		};
+		0C2A20B71CA5A641008C0D4C /* Preheat watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				0C2A20B81CA5A641008C0D4C /* Preheat watchOS.h */,
+				0C2A20BA1CA5A641008C0D4C /* Info.plist */,
+			);
+			path = "Preheat watchOS";
+			sourceTree = "<group>";
+		};
 		0CD20B0B1CA45C1E006BA4B9 = {
 			isa = PBXGroup;
 			children = (
 				0C2A209D1CA5A388008C0D4C /* Sources */,
 				0C1F56761CA45C4900C43D3A /* Supporting */,
+				0C2A20B71CA5A641008C0D4C /* Preheat watchOS */,
 				0CD20B161CA45C1E006BA4B9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -68,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				0CD20B151CA45C1E006BA4B9 /* Preheat.framework */,
+				0C2A20A91CA5A605008C0D4C /* Preheat.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -75,6 +99,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0C2A20A61CA5A605008C0D4C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CD20B121CA45C1E006BA4B9 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -85,9 +116,27 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		0CD20B141CA45C1E006BA4B9 /* Preheat */ = {
+		0C2A20A81CA5A605008C0D4C /* Preheat tvOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CD20B1D1CA45C1E006BA4B9 /* Build configuration list for PBXNativeTarget "Preheat" */;
+			buildConfigurationList = 0C2A20AE1CA5A605008C0D4C /* Build configuration list for PBXNativeTarget "Preheat tvOS" */;
+			buildPhases = (
+				0C2A20A41CA5A605008C0D4C /* Sources */,
+				0C2A20A51CA5A605008C0D4C /* Frameworks */,
+				0C2A20A61CA5A605008C0D4C /* Headers */,
+				0C2A20A71CA5A605008C0D4C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Preheat tvOS";
+			productName = "Preheat tvOS";
+			productReference = 0C2A20A91CA5A605008C0D4C /* Preheat.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		0CD20B141CA45C1E006BA4B9 /* Preheat iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0CD20B1D1CA45C1E006BA4B9 /* Build configuration list for PBXNativeTarget "Preheat iOS" */;
 			buildPhases = (
 				0CD20B101CA45C1E006BA4B9 /* Sources */,
 				0CD20B111CA45C1E006BA4B9 /* Frameworks */,
@@ -98,7 +147,7 @@
 			);
 			dependencies = (
 			);
-			name = Preheat;
+			name = "Preheat iOS";
 			productName = Preheat;
 			productReference = 0CD20B151CA45C1E006BA4B9 /* Preheat.framework */;
 			productType = "com.apple.product-type.framework";
@@ -112,6 +161,9 @@
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "Alexander Grebenyuk";
 				TargetAttributes = {
+					0C2A20A81CA5A605008C0D4C = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					0CD20B141CA45C1E006BA4B9 = {
 						CreatedOnToolsVersion = 7.2.1;
 					};
@@ -129,12 +181,20 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CD20B141CA45C1E006BA4B9 /* Preheat */,
+				0CD20B141CA45C1E006BA4B9 /* Preheat iOS */,
+				0C2A20A81CA5A605008C0D4C /* Preheat tvOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0C2A20A71CA5A605008C0D4C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CD20B131CA45C1E006BA4B9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -145,6 +205,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0C2A20A41CA5A605008C0D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0C2A20C01CA5A65F008C0D4C /* PreheatControllerForTableView.swift in Sources */,
+				0C2A20BF1CA5A65F008C0D4C /* PreheatControllerForCollectionView.swift in Sources */,
+				0C2A20BE1CA5A65F008C0D4C /* PreheatController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0CD20B101CA45C1E006BA4B9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -158,6 +228,48 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		0C2A20AF1CA5A605008C0D4C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Preheat-tvOS";
+				PRODUCT_NAME = Preheat;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Debug;
+		};
+		0C2A20B01CA5A605008C0D4C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.kean.Preheat-tvOS";
+				PRODUCT_NAME = Preheat;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.0;
+			};
+			name = Release;
+		};
 		0CD20B1B1CA45C1E006BA4B9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -260,7 +372,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.kean.Preheat;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Preheat;
 				SKIP_INSTALL = YES;
 			};
 			name = Debug;
@@ -278,7 +390,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.kean.Preheat;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Preheat;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -286,6 +398,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0C2A20AE1CA5A605008C0D4C /* Build configuration list for PBXNativeTarget "Preheat tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0C2A20AF1CA5A605008C0D4C /* Debug */,
+				0C2A20B01CA5A605008C0D4C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		0CD20B0F1CA45C1E006BA4B9 /* Build configuration list for PBXProject "Preheat" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -295,7 +415,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CD20B1D1CA45C1E006BA4B9 /* Build configuration list for PBXNativeTarget "Preheat" */ = {
+		0CD20B1D1CA45C1E006BA4B9 /* Build configuration list for PBXNativeTarget "Preheat iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CD20B1E1CA45C1E006BA4B9 /* Debug */,
