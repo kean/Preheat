@@ -1,6 +1,6 @@
-<p align="left"><img src="https://cloud.githubusercontent.com/assets/1567433/13573789/5bb83738-e492-11e5-930d-3c51341a8ac3.png" height="150"/>
+<p align="center"><img src="https://cloud.githubusercontent.com/assets/1567433/14049678/4639abe8-f2d0-11e5-9897-f7af82ff06ec.png" height="180"/>
 
-<p align="left">
+<p align="center">
 <a href="https://cocoapods.org"><img src="https://img.shields.io/cocoapods/v/Preheat.svg"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"></a>
 <a href="http://cocoadocs.org/docsets/Preheat"><img src="https://img.shields.io/cocoapods/p/Preheat.svg?style=flat)"></a>
