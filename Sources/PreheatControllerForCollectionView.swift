@@ -41,6 +41,19 @@ public class PreheatControllerForCollectionView: PreheatController {
         }
     }
     
+    /**
+     Removes all index paths without signalling the delegate. Then updates preheat rect (if enabled).
+     
+     This method is useful when your model changes completely in which case you would first stop preheating all images and then reset the preheat controller.
+     */
+    public override func reset() {
+        super.reset()
+        previousContentOffset = CGPointZero
+        if enabled {
+            updatePreheatRect()
+        }
+    }
+    
     /// Updates preheat rect if enabled.
     public override func scrollViewDidScroll() {
         if enabled {

@@ -28,6 +28,15 @@ public class PreheatController: NSObject {
     /// Default value is false. When preheat controller is enabled it immediately updates preheat index paths and starts reacting to user actions. When preheating controller is disabled it removes all current preheating index paths and signals its delegate.
     public var enabled = false
     
+    /**
+     Removes all index paths without signalling the delegate. Then updates preheat rect (if enabled).
+     
+     This method is useful when your model changes completely in which case you would first stop preheating all images and then reset the preheat controller.
+     */
+    public func reset() {
+        preheatIndexPath.removeAll()
+    }
+    
     deinit {
         scrollView.removeObserver(self, forKeyPath: "contentOffset", context: nil)
     }
