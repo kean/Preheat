@@ -7,18 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C1F567C1CA45C6D00C43D3A /* PreheatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F56791CA45C6D00C43D3A /* PreheatController.swift */; };
-		0C1F567D1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F567A1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift */; };
-		0C1F567E1CA45C6D00C43D3A /* PreheatControllerForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1F567B1CA45C6D00C43D3A /* PreheatControllerForTableView.swift */; };
+		0C2A20A11CA5A388008C0D4C /* PreheatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209E1CA5A388008C0D4C /* PreheatController.swift */; };
+		0C2A20A21CA5A388008C0D4C /* PreheatControllerForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */; };
+		0C2A20A31CA5A388008C0D4C /* PreheatControllerForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0C1F56771CA45C5400C43D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
-		0C1F56791CA45C6D00C43D3A /* PreheatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatController.swift; sourceTree = "<group>"; };
-		0C1F567A1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForCollectionView.swift; sourceTree = "<group>"; };
-		0C1F567B1CA45C6D00C43D3A /* PreheatControllerForTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForTableView.swift; sourceTree = "<group>"; };
 		0C1F56801CA45C9F00C43D3A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0C1F56811CA45CAA00C43D3A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0C2A209C1CA5A35C008C0D4C /* Preheat.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Preheat.podspec; sourceTree = "<group>"; };
+		0C2A209E1CA5A388008C0D4C /* PreheatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatController.swift; sourceTree = "<group>"; };
+		0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForCollectionView.swift; sourceTree = "<group>"; };
+		0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForTableView.swift; sourceTree = "<group>"; };
 		0CD20B151CA45C1E006BA4B9 /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -36,6 +37,7 @@
 		0C1F56761CA45C4900C43D3A /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				0C2A209C1CA5A35C008C0D4C /* Preheat.podspec */,
 				0C1F56801CA45C9F00C43D3A /* LICENSE */,
 				0C1F56811CA45CAA00C43D3A /* README.md */,
 				0C1F56771CA45C5400C43D3A /* Info.plist */,
@@ -43,20 +45,20 @@
 			name = Supporting;
 			sourceTree = "<group>";
 		};
-		0C1F56781CA45C6D00C43D3A /* Source */ = {
+		0C2A209D1CA5A388008C0D4C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0C1F56791CA45C6D00C43D3A /* PreheatController.swift */,
-				0C1F567A1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift */,
-				0C1F567B1CA45C6D00C43D3A /* PreheatControllerForTableView.swift */,
+				0C2A209E1CA5A388008C0D4C /* PreheatController.swift */,
+				0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */,
+				0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		0CD20B0B1CA45C1E006BA4B9 = {
 			isa = PBXGroup;
 			children = (
-				0C1F56781CA45C6D00C43D3A /* Source */,
+				0C2A209D1CA5A388008C0D4C /* Sources */,
 				0C1F56761CA45C4900C43D3A /* Supporting */,
 				0CD20B161CA45C1E006BA4B9 /* Products */,
 			);
@@ -147,9 +149,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C1F567E1CA45C6D00C43D3A /* PreheatControllerForTableView.swift in Sources */,
-				0C1F567C1CA45C6D00C43D3A /* PreheatController.swift in Sources */,
-				0C1F567D1CA45C6D00C43D3A /* PreheatControllerForCollectionView.swift in Sources */,
+				0C2A20A31CA5A388008C0D4C /* PreheatControllerForTableView.swift in Sources */,
+				0C2A20A21CA5A388008C0D4C /* PreheatControllerForCollectionView.swift in Sources */,
+				0C2A20A11CA5A388008C0D4C /* PreheatController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
