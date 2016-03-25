@@ -10,6 +10,8 @@ Automates preheating (precaching) of content in `UITableView` and `UICollectionV
 
 One of the main ways to use `Preheat` is to improve user experience in applications that display collections of images. `Preheat` allows you to detect which cells are soon going to appear in the viewport, so that you can precache images for those cells. You can use `Preheat` in conjunction with any image loading library including [Nuke](https://github.com/kean/Nuke) which it was designed for.
 
+The idea of automating preheating was inspired by Apple’s Photos framework [example app](https://developer.apple.com/library/ios/samplecode/UsingPhotosFramework/Introduction/Intro.html).
+
 ## Getting Started
 
 - See [Image Preheating Guide](http://outscope.net/blog/image-preheating)
