@@ -19,6 +19,7 @@
 		0C1F56771CA45C5400C43D3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Supporting/Info.plist; sourceTree = "<group>"; };
 		0C1F56801CA45C9F00C43D3A /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		0C1F56811CA45CAA00C43D3A /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		0C286FFC1CA5C7FE0053762A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		0C2A209C1CA5A35C008C0D4C /* Preheat.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Preheat.podspec; sourceTree = "<group>"; };
 		0C2A209E1CA5A388008C0D4C /* PreheatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatController.swift; sourceTree = "<group>"; };
 		0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForCollectionView.swift; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 				0C2A209C1CA5A35C008C0D4C /* Preheat.podspec */,
 				0C1F56801CA45C9F00C43D3A /* LICENSE */,
 				0C1F56811CA45CAA00C43D3A /* README.md */,
+				0C286FFC1CA5C7FE0053762A /* Package.swift */,
 				0C1F56771CA45C5400C43D3A /* Info.plist */,
 			);
 			name = Supporting;
