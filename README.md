@@ -6,9 +6,55 @@
 <a href="http://cocoadocs.org/docsets/Preheat"><img src="https://img.shields.io/cocoapods/p/Preheat.svg?style=flat)"></a>
 </p>
 
-Automates preheating (precaching) of content in `UITableView` and `UICollectionView`.
+Automates preheating (precaching) of content in `UITableView` and `UICollectionView`. Precaching refers to software that downloads data ahead of time in anticipation of its use.
+
+One of the main ways to use `Preheat` is to improve user experience in applications that display collections of images. `Preheat` allows you to detect which cells are going to be appear in the viewport soon and precache images for those cells. You can use `Preheat` in conjunction with any image loading library, including [Nuke](https://github.com/kean/Nuke) which it way designed for.
+
+## Getting Started
+
+- Read [Image Preheating Guide](http://outscope.net/blog/image-preheating)
+- Check out example project for [Nuke](https://github.com/kean/Nuke) package
 
 ## Usage
+
+Here is an example of how you might implement preheating in your application using `Preheat` and [Nuke](https://github.com/kean/Nuke):
+
+```swift
+class PreheatDemoViewController: UICollectionViewController, PreheatControllerDelegate {
+    var preheatController: PreheatController!
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.preheatController = PreheatControllerForCollectionView(collectionView: self.collectionView!)
+        self.preheatController.delegate = self
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+
+        self.preheatController.enabled = true
+    }
+
+    override func viewDidDisappear(animated: Bool) {
+        super.viewDidDisappear(animated)
+
+        // When you disable preheat controller it removes all index paths
+        // and signals the delegate to stop preheating.
+        self.preheatController.enabled = false
+    }
+
+    // MARK: PreheatControllerDelegate
+
+    func preheatControllerDidUpdate(controller: PreheatController, addedIndexPaths: [NSIndexPath], removedIndexPaths: [NSIndexPath]) {
+        func requestsForIndexPaths(indexPaths: [NSIndexPath]) -> [ImageRequest] {
+            return indexPaths.map { return ImageRequest(URL: self.photos[$0.row]) }
+        }
+        Nuke.startPreheatingImages(requestsForIndexPaths(addedIndexPaths))
+        Nuke.stopPreheatingImages(requestsForIndexPaths(removedIndexPaths))
+    }
+}
+```
 
 ## Requirements
 

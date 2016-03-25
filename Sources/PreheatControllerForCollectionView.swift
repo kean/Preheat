@@ -41,6 +41,7 @@ public class PreheatControllerForCollectionView: PreheatController {
         }
     }
     
+    /// Updates preheat rect if enabled.
     public override func scrollViewDidScroll() {
         if enabled {
             updatePreheatRect()
