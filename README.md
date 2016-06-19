@@ -14,7 +14,7 @@ The idea of automating preheating was inspired by Apple’s Photos framework [ex
 
 ## Getting Started
 
-- See [Image Preheating Guide](http://outscope.net/blog/image-preheating)
+- See [Image Preheating Guide](https://kean.github.io/blog/image-preheating)
 - Check out example project for [Nuke](https://github.com/kean/Nuke) package
 
 ## Usage
