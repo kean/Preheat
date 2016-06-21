@@ -6,7 +6,9 @@
 <a href="http://cocoadocs.org/docsets/Preheat"><img src="https://img.shields.io/cocoapods/p/Preheat.svg?style=flat)"></a>
 </p>
 
-Automates preheating (precaching) of content in `UITableView` and `UICollectionView`. Precaching refers to software that downloads data ahead of time in anticipation of its use.
+Automates preheating (prefetching) of content in `UITableView` and `UICollectionView`. Prefetching refers to software that downloads data ahead of time in anticipation of its use.
+
+> This library is very similar to the `UITableViewDataSourcePrefetching` added in iOS 10
 
 One of the main ways to use `Preheat` is to improve user experience in applications that display collections of images. `Preheat` allows you to detect which cells are soon going to appear in the viewport, so that you can precache images for those cells. You can use `Preheat` in conjunction with any image loading library including [Nuke](https://github.com/kean/Nuke) which it was designed for.
 
