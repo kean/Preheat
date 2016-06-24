@@ -6,18 +6,18 @@
 <a href="http://cocoadocs.org/docsets/Preheat"><img src="https://img.shields.io/cocoapods/p/Preheat.svg?style=flat)"></a>
 </p>
 
-Automates preheating (prefetching) of content in `UITableView` and `UICollectionView`. Prefetching refers to software that downloads data ahead of time in anticipation of its use.
+Automates preheating (prefetching) of content in `UITableView` and `UICollectionView`.
 
-> This library is very similar to the `UITableViewDataSourcePrefetching` added in iOS 10
+> This library is similar to `UITableViewDataSourcePrefetching` added in iOS 10
 
-One of the main ways to use `Preheat` is to improve user experience in applications that display collections of images. `Preheat` allows you to detect which cells are soon going to appear in the viewport, so that you can precache images for those cells. You can use `Preheat` in conjunction with any image loading library including [Nuke](https://github.com/kean/Nuke) which it was designed for.
+One of the ways to use `Preheat` is to improve user experience in applications that display collections of images. `Preheat` allows you to detect which cells are soon going to appear on the display, so that you can precache images for those cells. You can use `Preheat` with any image loading library, including [Nuke](https://github.com/kean/Nuke) which it was designed for.
 
 The idea of automating preheating was inspired by Apple’s Photos framework [example app](https://developer.apple.com/library/ios/samplecode/UsingPhotosFramework/Introduction/Intro.html).
 
 ## Getting Started
 
 - See [Image Preheating Guide](https://kean.github.io/blog/image-preheating)
-- Check out example project for [Nuke](https://github.com/kean/Nuke) package
+- Check out example project for [Nuke](https://github.com/kean/Nuke)
 
 ## Usage
 
@@ -25,37 +25,37 @@ Here is an example of how you might implement preheating in your application usi
 
 ```swift
 class PreheatDemoViewController: UICollectionViewController, PreheatControllerDelegate {
-    var preheatController: PreheatController!
+    var preheatController: PreheatController<UICollectionView>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.preheatController = PreheatControllerForCollectionView(collectionView: self.collectionView!)
-        self.preheatController.delegate = self
+        preheatController = PreheatController(view: collectionView!)
+        preheatController.handler = { [weak self] in
+            self?.preheatWindowChanged(addedIndexPaths: $0, removedIndexPaths: $1)
+        }
+    }
+
+    func preheatWindowChanged(addedIndexPaths added: [NSIndexPath], removedIndexPaths removed: [NSIndexPath]) {
+        func requestsForIndexPaths(indexPaths: [NSIndexPath]) -> [ImageRequest] {
+            return indexPaths.map { ImageRequest(photos[$0.row].URL) }
+        }
+        Nuke.startPreheatingImages(requestsForIndexPaths(added))
+        Nuke.stopPreheatingImages(requestsForIndexPaths(removed))
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        self.preheatController.enabled = true
+        preheatController.enabled = true
     }
 
     override func viewDidDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
 
-        // When you disable preheat controller it removes all index paths
-        // and signals the delegate to stop preheating.
-        self.preheatController.enabled = false
-    }
-
-    // MARK: PreheatControllerDelegate
-
-    func preheatControllerDidUpdate(controller: PreheatController, addedIndexPaths: [NSIndexPath], removedIndexPaths: [NSIndexPath]) {
-        func requestsForIndexPaths(indexPaths: [NSIndexPath]) -> [ImageRequest] {
-            return indexPaths.map { return ImageRequest(URL: self.photos[$0.row]) }
-        }
-        Nuke.startPreheatingImages(requestsForIndexPaths(addedIndexPaths))
-        Nuke.stopPreheatingImages(requestsForIndexPaths(removedIndexPaths))
+        // When you disable preheat controller it removes all preheating 
+        // index paths and calls its handler
+        preheatController.enabled = false
     }
 }
 ```
