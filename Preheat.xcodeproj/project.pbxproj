@@ -8,11 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0C2A20A11CA5A388008C0D4C /* PreheatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209E1CA5A388008C0D4C /* PreheatController.swift */; };
-		0C2A20A21CA5A388008C0D4C /* PreheatControllerForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */; };
-		0C2A20A31CA5A388008C0D4C /* PreheatControllerForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */; };
 		0C2A20BE1CA5A65F008C0D4C /* PreheatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209E1CA5A388008C0D4C /* PreheatController.swift */; };
-		0C2A20BF1CA5A65F008C0D4C /* PreheatControllerForCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */; };
-		0C2A20C01CA5A65F008C0D4C /* PreheatControllerForTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,8 +19,6 @@
 		0C286FFD1CA5DCBB0053762A /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		0C2A209C1CA5A35C008C0D4C /* Preheat.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Preheat.podspec; sourceTree = "<group>"; };
 		0C2A209E1CA5A388008C0D4C /* PreheatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatController.swift; sourceTree = "<group>"; };
-		0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForCollectionView.swift; sourceTree = "<group>"; };
-		0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatControllerForTableView.swift; sourceTree = "<group>"; };
 		0C2A20A91CA5A605008C0D4C /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD20B151CA45C1E006BA4B9 /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -64,8 +58,6 @@
 			isa = PBXGroup;
 			children = (
 				0C2A209E1CA5A388008C0D4C /* PreheatController.swift */,
-				0C2A209F1CA5A388008C0D4C /* PreheatControllerForCollectionView.swift */,
-				0C2A20A01CA5A388008C0D4C /* PreheatControllerForTableView.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -201,8 +193,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C2A20C01CA5A65F008C0D4C /* PreheatControllerForTableView.swift in Sources */,
-				0C2A20BF1CA5A65F008C0D4C /* PreheatControllerForCollectionView.swift in Sources */,
 				0C2A20BE1CA5A65F008C0D4C /* PreheatController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,8 +201,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C2A20A31CA5A388008C0D4C /* PreheatControllerForTableView.swift in Sources */,
-				0C2A20A21CA5A388008C0D4C /* PreheatControllerForCollectionView.swift in Sources */,
 				0C2A20A11CA5A388008C0D4C /* PreheatController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
