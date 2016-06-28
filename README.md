@@ -95,6 +95,10 @@ Import installed modules in your source files
 import Preheat
 ```
 
+### Manually
+1. Download and drop ```PreheatController.swift``` in your project.  
+2. Congratulations! 
+
 ## Contacts
 
 <a href="https://github.com/kean">
