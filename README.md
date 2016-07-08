@@ -10,7 +10,7 @@ Automates preheating (prefetching) of content in `UITableView` and `UICollection
 
 > This library is similar to `UITableViewDataSourcePrefetching` and `UICollectionViewDataSourcePrefetching` added in iOS 10
 
-One of the ways to use `Preheat` is to improve user experience in applications that display collections of images. `Preheat` allows you to detect which cells are soon going to appear on the display, so that you can precache images for those cells. You can use `Preheat` with any image loading library, including [Nuke](https://github.com/kean/Nuke) which it was designed for.
+One way to use `Preheat` is to improve user experience in applications that display collections of images. `Preheat` allows you to detect which cells are soon going to appear on the display, and prefetch images for those cells. You can use `Preheat` with any image loading library, including [Nuke](https://github.com/kean/Nuke) which it was designed for.
 
 The idea of automating preheating was inspired by Apple’s Photos framework [example app](https://developer.apple.com/library/ios/samplecode/UsingPhotosFramework/Introduction/Intro.html).
 
