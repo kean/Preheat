@@ -24,7 +24,7 @@ The idea of automating preheating was inspired by Apple’s Photos framework [ex
 Here is an example of how you might implement preheating in your application using **Preheat** and **Nuke**:
 
 ```swift
-class PreheatDemoViewController: UICollectionViewController, PreheatControllerDelegate {
+class PreheatDemoViewController: UICollectionViewController {
     var preheatController: PreheatController<UICollectionView>!
 
     override func viewDidLoad() {
