@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C2A20A11CA5A388008C0D4C /* PreheatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209E1CA5A388008C0D4C /* PreheatController.swift */; };
-		0C2A20BE1CA5A65F008C0D4C /* PreheatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209E1CA5A388008C0D4C /* PreheatController.swift */; };
+		0C2A20A11CA5A388008C0D4C /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209E1CA5A388008C0D4C /* Controller.swift */; };
+		0C2A20BE1CA5A65F008C0D4C /* Controller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C2A209E1CA5A388008C0D4C /* Controller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,7 +18,7 @@
 		0C286FFC1CA5C7FE0053762A /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		0C286FFD1CA5DCBB0053762A /* CHANGELOG.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		0C2A209C1CA5A35C008C0D4C /* Preheat.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Preheat.podspec; sourceTree = "<group>"; };
-		0C2A209E1CA5A388008C0D4C /* PreheatController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreheatController.swift; sourceTree = "<group>"; };
+		0C2A209E1CA5A388008C0D4C /* Controller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Controller.swift; sourceTree = "<group>"; };
 		0C2A20A91CA5A605008C0D4C /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CD20B151CA45C1E006BA4B9 /* Preheat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Preheat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -57,7 +57,7 @@
 		0C2A209D1CA5A388008C0D4C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				0C2A209E1CA5A388008C0D4C /* PreheatController.swift */,
+				0C2A209E1CA5A388008C0D4C /* Controller.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -142,7 +142,7 @@
 		0CD20B0C1CA45C1E006BA4B9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Alexander Grebenyuk";
 				TargetAttributes = {
 					0C2A20A81CA5A605008C0D4C = {
@@ -194,7 +194,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C2A20BE1CA5A65F008C0D4C /* PreheatController.swift in Sources */,
+				0C2A20BE1CA5A65F008C0D4C /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +202,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C2A20A11CA5A388008C0D4C /* PreheatController.swift in Sources */,
+				0C2A20A11CA5A388008C0D4C /* Controller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +246,7 @@
 				PRODUCT_NAME = Preheat;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.0;
 			};
@@ -288,7 +289,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -330,7 +331,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -350,12 +351,12 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.kean.Preheat;
 				PRODUCT_NAME = Preheat;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -369,12 +370,13 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.kean.Preheat;
 				PRODUCT_NAME = Preheat;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 2.3;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

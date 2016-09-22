@@ -5,9 +5,9 @@
 import UIKit
 
 /// Automates prefetching of content in a scroll views. After creating a preheat controller you should enable it by setting `enabled` property to `true`.
-public class Controller<V where V: UIScrollView, V: Preheated> : NSObject {
+public class Controller<V> : NSObject where V: UIScrollView, V: Preheated {
     /// Gets called when the preheat window changes. Provides an array of index paths that were added and that were removed from the previous preheat window. Index paths are ordered by the distance to the viewport.
-    public var handler: ((added: [IndexPath], removed: [IndexPath]) -> Void)?
+    public var handler: ((_ added: [IndexPath], _ removed: [IndexPath]) -> Void)?
     
     /// The view that the receiver was initialized with.
     public let view: V
@@ -54,23 +54,19 @@ public class Controller<V where V: UIScrollView, V: Preheated> : NSObject {
             update()
         }
     }
-    
-    override public func observeValue(forKeyPath keyPath: String?, of object: AnyObject?, change: [NSKeyValueChangeKey : AnyObject]?, context: UnsafeMutablePointer<Void>?) {
-        if object === view {
-            if enabled {
-                update()
-            }
-        } else {
-            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: nil)
+
+    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        if enabled {
+            update()
         }
     }
-    
+
     private func update() {
         guard shouldUpdatePreheatRect() else {
             return
         }
-        let isScrollingForward = view.isScrollingForward(previousOffset: previousOffset)
-        let preheatRect = view.preheatingRect(isScrollingForward: isScrollingForward, sizeRatio: preheatRectSizeRatio)
+        let isScrollingForward = view.isScrollingForward(previousOffset)
+        let preheatRect = view.preheatingRect(isScrollingForward, sizeRatio: preheatRectSizeRatio)
         let indexPaths = Set(view.indexPaths(in: preheatRect)).subtracting(view.indexPathsForVisibleItems)
         updateIndexPaths(indexPaths.sorted(by: { // sort in scroll direction
             if isScrollingForward {
@@ -98,12 +94,12 @@ public class Controller<V where V: UIScrollView, V: Preheated> : NSObject {
         let added = newIndexPaths.filter { !indexPaths.contains($0) }
         let removed = indexPaths.filter { !newIndexPaths.contains($0) }
         indexPaths = newIndexPaths
-        handler?(added: added, removed: removed)
+        handler?(added, removed)
     }
 }
 
 private extension Preheated where Self: UIScrollView {
-    func preheatingRect(isScrollingForward: Bool, sizeRatio: CGFloat) -> CGRect {
+    func preheatingRect(_ isScrollingForward: Bool, sizeRatio: CGFloat) -> CGRect {
         let viewport = CGRect(origin: contentOffset, size: bounds.size)
         switch orientation {
         case .vertical:
@@ -116,8 +112,8 @@ private extension Preheated where Self: UIScrollView {
             return CGRect(x: x, y: 0, width: width, height: viewport.height).integral
         }
     }
-    
-    func isScrollingForward(previousOffset: CGPoint?) -> Bool {
+
+    func isScrollingForward(_ previousOffset: CGPoint?) -> Bool {
         guard let previousOffset = previousOffset else {
             return true
         }
