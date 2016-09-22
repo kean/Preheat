@@ -62,8 +62,9 @@ class PreheatDemoViewController: UICollectionViewController {
 
 ## Requirements
 
-- iOS 8.0+, tvOS 9.0+
-- Xcode 7.3+, Swift 2.2+
+- iOS 8.0 / tvOS 9.0
+- Xcode 8
+- Swift 3
 
 ## Installation<a name="installation"></a>
 
@@ -94,18 +95,6 @@ Import installed modules in your source files
 ```swift
 import Preheat
 ```
-
-## Contacts
-
-<a href="https://github.com/kean">
-<img src="https://cloud.githubusercontent.com/assets/1567433/6521218/9c7e2502-c378-11e4-9431-c7255cf39577.png" height="44" hspace="2"/>
-</a>
-<a href="https://twitter.com/a_grebenyuk">
-<img src="https://cloud.githubusercontent.com/assets/1567433/6521243/fb085da4-c378-11e4-973e-1eeeac4b5ba5.png" height="44" hspace="2"/>
-</a>
-<a href="https://www.linkedin.com/pub/alexander-grebenyuk/83/b43/3a0">
-<img src="https://cloud.githubusercontent.com/assets/1567433/6521256/20247bc2-c379-11e4-8e9e-417123debb8c.png" height="44" hspace="2"/>
-</a>
 
 ## License
 
