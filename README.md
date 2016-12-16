@@ -24,30 +24,34 @@ The idea of automating preheating was inspired by Apple’s Photos framework [ex
 Here is an example of how you might implement preheating in your application using **Preheat** and **Nuke**:
 
 ```swift
+import Preheat
+import Nuke
+
 class PreheatDemoViewController: UICollectionViewController {
-    var preheatController: PreheatController<UICollectionView>!
+    let preheater = Nuke.Preheater()
+    var controller: Preheat.Controller<UICollectionView>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        preheatController = PreheatController(view: collectionView!)
-        preheatController.handler = { [weak self] in
-            self?.preheatWindowChanged(addedIndexPaths: $0, removedIndexPaths: $1)
+        controller = Preheat.Controller(view: collectionView!)
+        controller?.handler = { [weak self] addedIndexPaths, removedIndexPaths in
+            self?.preheat(added: addedIndexPaths, removed: removedIndexPaths)
         }
     }
 
-    func preheatWindowChanged(addedIndexPaths added: [NSIndexPath], removedIndexPaths removed: [NSIndexPath]) {
-        func requestsForIndexPaths(indexPaths: [NSIndexPath]) -> [ImageRequest] {
-            return indexPaths.map { ImageRequest(photos[$0.row].URL) }
+    func preheat(added: [IndexPath], removed: [IndexPath]) {
+        func requests(for indexPaths: [IndexPath]) -> [Request] {
+            return indexPaths.map { Request(url: photos[$0.row]) }
         }
-        Nuke.startPreheatingImages(requestsForIndexPaths(added))
-        Nuke.stopPreheatingImages(requestsForIndexPaths(removed))
+        preheater.startPreheating(with: requests(for: added))
+        preheater.stopPreheating(with: requests(for: removed))
     }
 
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
 
-        preheatController.enabled = true
+        controller?.enabled = true
     }
 
     override func viewDidDisappear(animated: Bool) {
@@ -55,7 +59,7 @@ class PreheatDemoViewController: UICollectionViewController {
 
         // When you disable preheat controller it removes all preheating 
         // index paths and calls its handler
-        preheatController.enabled = false
+        controller?.enabled = false
     }
 }
 ```
