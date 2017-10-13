@@ -1,5 +1,9 @@
 [Changelog](https://github.com/kean/Preheat/releases) for all versions
 
+## Preheat 4.0
+
+- Swift 4
+
 ## Preheat 3.0
 
 - Swift 3
