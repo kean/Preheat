@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name             = "Preheat"
-    s.version          = "3.0"
+    s.version          = "4.0"
     s.summary          = "Automates precaching of content in UITableView and UICollectionView"
 
     s.homepage         = "https://github.com/kean/Preheat"

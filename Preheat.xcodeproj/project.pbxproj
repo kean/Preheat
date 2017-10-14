@@ -356,7 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.kean.Preheat;
 				PRODUCT_NAME = Preheat;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -376,7 +376,7 @@
 				PRODUCT_NAME = Preheat;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};

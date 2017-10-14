@@ -67,8 +67,8 @@ class PreheatDemoViewController: UICollectionViewController {
 ## Requirements
 
 - iOS 8.0 / tvOS 9.0
-- Xcode 8
-- Swift 3
+- Xcode 9
+- Swift 4
 
 ## Installation<a name="installation"></a>
 
