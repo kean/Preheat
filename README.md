@@ -42,7 +42,11 @@ class PreheatDemoViewController: UICollectionViewController {
 
     func preheat(added: [IndexPath], removed: [IndexPath]) {
         func requests(for indexPaths: [IndexPath]) -> [Request] {
-            return indexPaths.map { Request(url: photos[$0.row]) }
+            return indexPaths.map {
+                var request = Request(url: photos[$0.row])
+                request.priority = .ow
+                return request
+            }
         }
         preheater.startPreheating(with: requests(for: added))
         preheater.stopPreheating(with: requests(for: removed))
