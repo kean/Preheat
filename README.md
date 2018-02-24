@@ -44,7 +44,7 @@ class PreheatDemoViewController: UICollectionViewController {
         func requests(for indexPaths: [IndexPath]) -> [Request] {
             return indexPaths.map {
                 var request = Request(url: photos[$0.row])
-                request.priority = .ow
+                request.priority = .low
                 return request
             }
         }
