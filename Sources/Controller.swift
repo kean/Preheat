@@ -138,10 +138,19 @@ public protocol Preheated {
 
 extension UICollectionView: Preheated {
     public var orientation: ScrollOrientation {
-        switch (collectionViewLayout as! UICollectionViewFlowLayout).scrollDirection {
-        case .vertical: return .vertical
-        case .horizontal: return .horizontal
+        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
+            switch layout.scrollDirection {
+            case .vertical: return .vertical
+            case .horizontal: return .horizontal
+            }
+        } else if #available(iOS 13.0, tvOS 13.0, *), let layout = collectionViewLayout as? UICollectionViewCompositionalLayout {
+            switch layout.configuration.scrollDirection {
+            case .vertical: return .vertical
+            case .horizontal: return .horizontal
+            }
         }
+
+        preconditionFailure("Unknown collection view scroll orientation")
     }
     
     public func indexPaths(in rect: CGRect) -> [IndexPath] {
